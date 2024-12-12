@@ -1,5 +1,6 @@
+import Champions from "@/components/_Champions";
 import React from "react";
 
-export default function ChapionsPage() {
-  return <div>ChapionsPage</div>;
+export default async function ChapionsPage() {
+  return <Champions />;
 }
