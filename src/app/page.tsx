@@ -1,7 +1,5 @@
-import Image from "next/image";
+import React from "react";
 
 export default function Home() {
-  return (
-    <></>
-  );
+  return (<div>아 하기싫어......</div>);
 }
