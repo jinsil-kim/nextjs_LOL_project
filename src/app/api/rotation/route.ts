@@ -1,8 +1,10 @@
+import { NextResponse } from "next/server";
+
 export async function GET() {
   const apiKey = process.env.RIOT_API_KEY;
 
   if (!apiKey) {
-    return Response.json({ error: "API Key is missing." }, { status: 500 });
+    return NextResponse.json({ error: "API Key is missing." }, { status: 500 });
   }
 
   try {
@@ -21,8 +23,8 @@ export async function GET() {
 
     const data = await response.json();
     // console.log(data);
-    return Response.json(data);
+    return NextResponse.json(data);
   } catch (error) {
-    return Response.json(error);
+    return NextResponse.json(error);
   }
 }
