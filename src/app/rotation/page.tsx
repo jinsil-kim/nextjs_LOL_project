@@ -19,11 +19,11 @@ export default function RotationPage() {
     version();
   }, []);
 
-  //   const { data: latestVersion } = useQuery({
+  //   const { data: version } = useQuery({
   //     queryKey: ["version"],
   //     queryFn: fetchVersion,
   //   });
-  // console.log('la', latestVersion)
+  // console.log('la', version)
 
   const { data: items, isLoading } = useQuery({
     queryKey: ["rotation"],

@@ -46,16 +46,14 @@ export const fetchChampions = async (): Promise<Champion[]> => {
   }
 };
 
-export const fetchChampionsDetail = async (
-  id: string
-): Promise<ChampionDetail> => {
+export const fetchChampionsDetail = async ( id: string ): Promise<ChampionDetail> => {
   try {
     const latestVersion = await fetchVersion();
 
     // 챔피언 상세정보 api
     const championDetailRes = await fetch(
-      `${BASE_URL}/cdn/${latestVersion}/data/ko_KR/champion/${id}.json`
-    );
+      `${BASE_URL}/cdn/${latestVersion}/data/ko_KR/champion/${id}.json`);
+      
     if (!championDetailRes)
       throw new Error("챔피언 목록을 불러오는데 실패했습니다");
 
