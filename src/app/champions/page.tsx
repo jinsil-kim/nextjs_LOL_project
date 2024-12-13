@@ -1,4 +1,6 @@
-import Champions from "@/components/_Champions";
+// 챔피언 목록 페이지
+
+import Champions from "@/components/_/_Champions";
 import { Metadata } from "next";
 import React from "react";
 
@@ -7,6 +9,6 @@ export const metadata: Metadata = {
   description: "League of Legend's Champions",
 };
 
-export default async function ChapionsPage() {
+export default async function ChampionsPage() {
   return <Champions />;
 }

@@ -1,3 +1,5 @@
+import { ChampionRotation } from "@/types/championRotation";
+import { fetchChampions } from "@/utils/serverApi";
 import { NextResponse } from "next/server";
 
 export async function GET() {
@@ -11,6 +13,7 @@ export async function GET() {
     const response = await fetch(
       "https://kr.api.riotgames.com/lol/platform/v3/champion-rotations",
       {
+        method: "GET",
         headers: {
           "X-Riot-Token": apiKey,
         },
@@ -21,9 +24,13 @@ export async function GET() {
       throw new Error(`Failed to fetch`);
     }
 
-    const data = await response.json();
-    // console.log(data);
-    return NextResponse.json(data);
+    const data: ChampionRotation = await response.json();
+    const champions = await fetchChampions();
+    const rotationChampion = champions.filter((ro) =>
+      data.freeChampionIds.includes(Number(ro.key))
+    );
+    console.log(rotationChampion)
+    return NextResponse.json(rotationChampion);
   } catch (error) {
     return NextResponse.json(error);
   }
