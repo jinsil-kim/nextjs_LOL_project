@@ -19,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} py-20`}>
+      <body className={`${inter.className} py-20 bg-black`}>
         <header className="py-4 text-2xl bg-[#101349] text-white fixed top-0 w-full z-10">
           <nav className="flex justify-around">
             <div>
