@@ -53,13 +53,11 @@ export interface ChampionStats {
 }
 
 export interface ChampionDetail {
-  data: {
-    [key: string]: {
-      name: string;
-      title: string;
-      info: ChampionInfo;
-      blurb: string;
-      image: ChampionImage;
-    };
+  [key: string]: {
+    name: string;
+    title: string;
+    info: ChampionInfo;
+    blurb: string;
+    image: ChampionImage;
   };
 }

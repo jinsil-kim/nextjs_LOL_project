@@ -58,7 +58,7 @@ export const fetchChampionsDetail = async ( id: string ): Promise<ChampionDetail
       throw new Error("챔피언 목록을 불러오는데 실패했습니다");
 
     const championDetailData = await championDetailRes.json();
-    return championDetailData;
+    return championDetailData.data;
   } catch (error) {
     console.error("championDetailData api호출 실패", error);
     throw new Error("챔피언 상세 정보를 가져오지 못했습니다");
