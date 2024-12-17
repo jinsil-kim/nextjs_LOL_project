@@ -59,5 +59,15 @@ export interface ChampionDetail {
     info: ChampionInfo;
     blurb: string;
     image: ChampionImage;
+    spells: [
+      {
+        id: string;
+        name: string;
+        description: string;
+        image: {
+          full: string;
+        };
+      }
+    ];
   };
 }
