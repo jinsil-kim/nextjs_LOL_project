@@ -20,7 +20,7 @@ interface Skills {
 
 export function generateMetadata({ params }: ChampionPageProps) {
   return {
-    title: `Detail Page: ${params.id}`,
+    title: `Champion: ${params.id}`,
     description: `Detail Page: ${params.id}`,
   };
 }

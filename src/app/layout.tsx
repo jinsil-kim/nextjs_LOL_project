@@ -25,7 +25,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} pt-16`}>
+      <body className={`${inter.className} pt-24`}>
         <ThemeProvider>
           {" "}
           <header className="pt-2 text-3xl bg-gray-800 text-white fixed top-0 w-full z-50">
