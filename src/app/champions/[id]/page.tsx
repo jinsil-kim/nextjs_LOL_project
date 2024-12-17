@@ -1,7 +1,6 @@
 // 챔피언 디테일 페이지 ssr
 import { BASE_URL } from "@/constants/api";
 import { fetchChampionsDetail, fetchVersion } from "@/utils/serverApi";
-import { Metadata } from "next";
 import Image from "next/image";
 import React from "react";
 
@@ -34,7 +33,6 @@ export default async function ChampionDetailPage({
   const championDetail = await fetchChampionsDetail(id);
 
   const skills: Skills[] = championDetail[id].spells;
-  // console.log("------", skills);
 
   const latestVersion = await fetchVersion();
 
