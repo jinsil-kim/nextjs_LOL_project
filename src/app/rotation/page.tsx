@@ -7,7 +7,6 @@ import { BASE_URL } from "@/constants/api";
 import { Champion } from "@/types/champions";
 import { fetchVersion } from "@/utils/serverApi";
 import Image from "next/image";
-// import { fetchVersion } from "@/utils/serverApi";
 
 export default function RotationPage() {
   // 버전정보
@@ -21,6 +20,7 @@ export default function RotationPage() {
   //   version();
   // }, []);
 
+  // 버전 정보
   const { data: version, isPending: isVersionPending } = useQuery({
     queryKey: ["version"],
     queryFn: async () => await fetchVersion(),

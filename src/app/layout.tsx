@@ -21,10 +21,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} py-20`}>
+      <body className={`${inter.className} pt-16`}>
         <ThemeProvider>
           {" "}
-          <header className="py-4 text-2xl bg-gray-800 text-white fixed top-0 w-full z-10">
+          <header className="py-4 text-2xl bg-gray-800 text-white fixed top-0 w-full z-50">
             <nav className="flex justify-around">
               <div>
                 <Link href={"/"}>Home</Link>
@@ -38,15 +38,17 @@ export default function RootLayout({
             </nav>
           </header>
           <Providers>{children}</Providers>
-          <footer className="bg-gray-800 p-3 fixed bottom-0 w-full">
-            <div className="container mx-auto text-center text-white text-sm">
-              [Your Product Name] is not endorsed by Riot Games and does not
-              reflect the views or opinions of Riot Games or anyone officially
-              involved in producing or managing Riot Games properties. Riot
-              Games and all associated properties are trademarks or registered
-              trademarks of Riot Games, Inc.
-            </div>
-          </footer>
+          <div className="w-screen">
+            <footer className="bg-gray-800 p-3 relative inset-0">
+              <div className="container mx-auto text-center text-white text-sm">
+                [Your Product Name] is not endorsed by Riot Games and does not
+                reflect the views or opinions of Riot Games or anyone officially
+                involved in producing or managing Riot Games properties. Riot
+                Games and all associated properties are trademarks or registered
+                trademarks of Riot Games, Inc.
+              </div>
+            </footer>
+          </div>
         </ThemeProvider>
       </body>
     </html>
