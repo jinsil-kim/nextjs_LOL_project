@@ -6,12 +6,16 @@ import Providers from "@/components/providers/RQProvider";
 import React from "react";
 import { ThemeProvider } from "@/components/providers/ThemeProvider";
 import DarkMode from "@/components/DarkMode";
+import Image from "next/image";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "League of Legends",
   description: "League of Legend's Champions",
+  icons: {
+    icon: "/logo.ico",
+  },
 };
 
 export default function RootLayout({
@@ -24,10 +28,18 @@ export default function RootLayout({
       <body className={`${inter.className} pt-16`}>
         <ThemeProvider>
           {" "}
-          <header className="py-4 text-2xl bg-gray-800 text-white fixed top-0 w-full z-50">
-            <nav className="flex justify-around">
+          <header className="pt-2 text-3xl bg-gray-800 text-white fixed top-0 w-full z-50">
+            <nav className="flex justify-around items-center">
               <div>
-                <Link href={"/"}>Home</Link>
+                <Link href={"/"}>
+                  <Image
+                    src="/lollogo.png"
+                    alt="League of Legends Logo"
+                    width={90}
+                    height={90}
+                    className="object-contain"
+                  />
+                </Link>
               </div>
               <div className="flex gap-16">
                 <Link href={"/champions"}>Champions</Link>

@@ -1,6 +1,7 @@
 // 챔피언 디테일 페이지 ssr
 import { BASE_URL } from "@/constants/api";
 import { fetchChampionsDetail, fetchVersion } from "@/utils/serverApi";
+import { Metadata } from "next";
 import Image from "next/image";
 import React from "react";
 
@@ -17,6 +18,13 @@ interface Skills {
   };
 }
 
+export function generateMetadata({ params }: ChampionPageProps) {
+  return {
+    title: `Detail Page: ${params.id}`,
+    description: `Detail Page: ${params.id}`,
+  };
+}
+
 export const dynamic = "force-dynamic";
 
 export default async function ChampionDetailPage({
@@ -26,7 +34,7 @@ export default async function ChampionDetailPage({
   const championDetail = await fetchChampionsDetail(id);
 
   const skills: Skills[] = championDetail[id].spells;
-  console.log("------", skills);
+  // console.log("------", skills);
 
   const latestVersion = await fetchVersion();
 

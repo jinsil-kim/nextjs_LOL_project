@@ -29,7 +29,7 @@ export async function GET() {
     const rotationChampion = champions.filter((ro) =>
       data.freeChampionIds.includes(Number(ro.key))
     );
-    console.log(rotationChampion)
+    // console.log(rotationChampion)
     return NextResponse.json(rotationChampion);
   } catch (error) {
     return NextResponse.json(error);
