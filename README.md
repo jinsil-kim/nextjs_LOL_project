@@ -63,7 +63,6 @@ LOL 게임 캐릭터와 아이템을 소개하는 웹 사이트 </br>
 
 ## 🌏 디랙토리
 ![alt text](image.png)
-📁 src/ ├── 📁 app/ │ ├── 📁 champions/ # 챔피언 목록 및 상세 페이지 │ ├── 📁 items/ # 아이템 목록 페이지 │ ├── 📁 rotation/ # 챔피언 로테이션 페이지 │ ├── layout.tsx # 글로벌 레이아웃 │ └── page.tsx # 메인 페이지 ├── 📁 components/ # 재사용 가능한 컴포넌트 ├── 📁 styles/ # 글로벌 스타일 ├── 📁 types/ # 타입 정의 파일 ├── 📁 utils/ # 유틸리티 함수 └── 📁 public/ # 정적 파일
 
 ## 💥 트러블슈팅
 
